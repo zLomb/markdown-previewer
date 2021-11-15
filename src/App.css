@@ -1,26 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 
 body {
-    background-color: rgb(44, 47, 51);
+    background-image: url("./images/prism.png");
+    background-repeat: repeat;
 }
 
 #title {
-    font-family: 'Russo One', sans-serif;
-    color: rgb(140, 74, 247);
+    font-size: 35px;
+    font-family: 'Concert One', cursive;
+    color: rgb(255, 255, 255);
     text-align: center;
     margin-top: 30px;
-    background-color: rgb(0, 0, 0);
-    border-radius: 15px;
-    padding: 10px;
+    text-shadow: 0px 4px black;
 }
 
 textarea {
     width: 100%;
-    min-height: 200px;
-    background-color: black;
+    min-height: 50vh;
+    background-color: rgba(8, 8, 8, .5);
     color: white;
     border: none;
-    border: solid 4px rgb(91, 43, 168);
+    border: solid 4px rgb(0, 0, 0);
 }
 
 textarea:focus {
@@ -32,11 +32,11 @@ textarea:focus {
 }
 
 .box-header {
-    font-family: 'Russo One', sans-serif;
+    font-family: 'Concert One', cursive;
     text-align: center;
-    background-color: rgb(91, 43, 168);
+    background-color: rgb(0, 0, 0);
     border-top-right-radius: 25px;
-    color: white;
+    color: rgb(255, 255, 255);
     height: 40px;
     font-size: 30px;
 }
@@ -45,7 +45,7 @@ textarea:focus {
     min-height: 80vh;
     max-width: 100%;
     background-color: white;
-    border: solid 4px rgb(91, 43, 168);
+    border: solid 4px rgb(0, 0, 0);
     text-align: justify;
     word-wrap: break-word;
     overflow-y: scroll;
