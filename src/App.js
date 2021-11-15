@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+import { useState } from 'react';
 
 function App() {
+
+  const [text, setText] = useState('');
+  const handleChange = (e) => {
+    setText(e.target.value);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="row">
+        <Editor handlechange = {handleChange}/>
+        <Preview text={text}/>
+      </div>
+    </div>
+  );
+}
+
+function Editor( { handlechange } ) {
+
+  return (
+    <div className="col-xs-12 col-md-5 box">
+      <div className="box-header">Editor</div>
+      <textarea id="editor" onChange={handlechange}></textarea>
+    </div>
+  );
+}
+
+function Preview( { text } ) {
+  return (
+    <div className="col-xs-12 col-md-7 box">
+      <div className="box-header">Preview</div>
+      <div id="preview">{text}</div>
     </div>
   );
 }
