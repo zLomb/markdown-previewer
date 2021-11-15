@@ -46,7 +46,6 @@ textarea:focus {
     max-width: 100%;
     background-color: white;
     border: solid 4px rgb(0, 0, 0);
-    text-align: justify;
     word-wrap: break-word;
     overflow-y: scroll;
 }

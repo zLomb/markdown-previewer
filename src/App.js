@@ -5,7 +5,35 @@ import { marked } from 'marked';
 
 function App() {
 
-  const [text, setText] = useState('# Hello! (H1) \n## Hello! (H2)\n[I am a link!](www.google.com) \n And here is some inline code too! `<div></div>`\n');
+  const placeholder = `# React Markdown Previewer
+
+  ## I'm a sub-heading! (H2)
+  
+  There's also inline code, \`<p>Hello!</p>\`
+  
+  \`\`\`
+  // And multiline code:
+  
+  function example() {
+    return 'Hello world!'
+  }
+  \`\`\`
+  
+  [I'm a link!](www.google.com)
+  
+  > And I'm a blockquote!
+  > (I'm a blockquote but **bold**)
+  
+  - And I'm a list.
+    - Some are bulleted.
+       - With different indentation levels.
+          - That look like this.
+  
+  _And you can also decorate your text with cat images_
+  ![Cat](https://memegenerator.net/img/instances/85872113.jpg)
+  `;
+
+  const [text, setText] = useState(placeholder);
   const handleChange = (e) => {
     setText(e.target.value);
   }
